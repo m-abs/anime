@@ -27,12 +27,8 @@ rollup({
         dangerousForOf: true
       },
       targets: {
-        firefox: 32,
-        chrome: 24,
-        safari: 6,
-        opera: 15,
-        edge: 10,
-        ie: 10
+        chrome: 77,
+        safari: 12,
       }
     })
   ]

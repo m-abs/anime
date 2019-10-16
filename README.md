@@ -1,7 +1,7 @@
 <h1 align="center">
   <a href="https://animejs.com"><img src="/documentation/assets/img/animejs-v3-header-animation.gif" width="250"/></a>
   <br>
-  anime.js
+  @mabs.dk/nativescript-animejs - NativeScript wrapper for anime.js
 </h1>
 
 <h4 align="center">JavaScript animation engine | <a href="https://animejs.com" target="_blank">animejs.com</a></h4>
@@ -27,38 +27,22 @@
 Via npm
 
 ```bash
-$ npm install animejs --save
+$ npm install @mabs.dk/nativescript-animejs --save
 ```
 
 or manual [download](https://github.com/juliangarnier/anime/archive/master.zip).
 
 ### Usage
 
-#### ES6 modules
-
 ```javascript
-import anime from 'animejs/lib/anime.es.js';
-```
-
-#### CommonJS
-
-```javascript
-const anime = require('anime');
-```
-
-#### File include
-
-Link `anime.min.js` in your HTML :
-
-```html
-<script src="anime.min.js"></script>
+import anime from '@mabs.dk/nativescript-animejs';
 ```
 
 ### Hello world
 
 ```javascript
 anime({
-  targets: 'div',
+  targets: tnsView,
   translateX: 250,
   rotate: '1turn',
   backgroundColor: '#FFF',
@@ -96,13 +80,6 @@ anime({
 * [Sphere animation](https://codepen.io/juliangarnier/pen/b3bb8ca599ad0f9d00dd044e56cbdea5?editors=0010)
 * [Layered animations](https://codepen.io/juliangarnier/pen/6ca836535cbea42157d1b8d56d00be84?editors=0010)
 * [anime.js logo animation](https://codepen.io/juliangarnier/pen/d43e8ec355c30871cbe775193255d6f6?editors=0010)
-
-
-## Browser support
-
-| Chrome | Safari | IE / Edge | Firefox | Opera |
-| --- | --- | --- | --- | --- |
-| 24+ | 8+ | 11+ | 32+ | 15+ |
 
 ## <a href="https://animejs.com"><img src="/documentation/assets/img/animejs-v3-logo-animation.gif" width="150" alt="anime-js-v3-logo"/></a>
 

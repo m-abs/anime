@@ -1,15 +1,19 @@
 {
-  "name": "animejs",
-  "version": "3.1.0",
+  "name": "@mabs.dk/nativescript-animejs",
+  "version": "3.1.0-alpha.0",
   "homepage": "http://animejs.com",
-  "repository": "juliangarnier/anime",
-  "description": "JavaScript animation engine",
+  "repository": "m-abs/anime",
+  "description": "JavaScript animation engine - forked for NativeScript",
   "umd:main": "lib/anime.min.js",
   "module": "lib/anime.es.js",
   "main": "lib/anime.js",
-  "umd:name": "anime",
+  "umd:name": "tnsAnime",
+  "types": "lib/anime.d.ts",
   "license": "MIT",
   "author": "Julian Garnier <hello@julian.gr>",
+  "contributors": [
+    "Morten Sjøgren <m_abs@mabs.dk>"
+  ],
   "files": [
     "lib"
   ],
@@ -26,7 +30,8 @@
     "CSS",
     "transforms",
     "SVG",
-    "canvas"
+    "canvas",
+    "nativescript"
   ],
   "devDependencies": {
     "gzip-size": "^4.1.0",
