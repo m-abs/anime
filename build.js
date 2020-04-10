@@ -9,7 +9,7 @@ const umd = pkg['umd:main'];
 const date = new Date();
 
 const banner = `/*
- * anime.js v${ pkg.version }
+ * ${ pkg.name } v${ pkg.version }
  * (c) ${ date.getFullYear() } Julian Garnier
  * Released under the MIT license
  * animejs.com
