@@ -49,7 +49,7 @@ const defaultTweenSettings = {
   round: 0
 }
 
-const validTransforms = ['translateX', 'translateY', 'translateZ', 'rotate', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'perspective'];
+const validTransforms = ['translateX', 'translateY', 'translateZ', 'rotate', 'rotateX', 'rotateY', 'rotateZ', 'scale', 'scaleX', 'scaleY', 'scaleZ', 'skew', 'skewX', 'skewY', 'perspective', 'matrix', 'matrix3d'];
 
 // Caching
 
@@ -149,7 +149,7 @@ function spring(string, duration) {
 // Basic steps easing implementation https://developer.mozilla.org/fr/docs/Web/CSS/transition-timing-function
 
 function steps(steps = 10) {
-  return t => Math.round(t * steps) * (1 / steps);
+  return t => Math.ceil((minMax(t, 0.000001, 1)) * steps) * (1 / steps);
 }
 
 // BezierEasing https://github.com/gre/bezier-easing
@@ -1141,6 +1141,7 @@ function anime(params = {}) {
 
   instance.reverse = function() {
     toggleInstanceDirection();
+    instance.completed = instance.reversed ? false : true;
     resetTime();
   }
 
@@ -1267,7 +1268,7 @@ function timeline(params = {}) {
   return tl;
 }
 
-anime.version = '3.1.0';
+anime.version = '3.2.0';
 anime.speed = 1;
 anime.running = activeInstances;
 anime.remove = removeTargets;

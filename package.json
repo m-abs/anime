@@ -1,6 +1,6 @@
 {
   "name": "@mabs.dk/nativescript-animejs",
-  "version": "3.1.0-alpha.0",
+  "version": "3.2.0-alpha.0",
   "homepage": "http://animejs.com",
   "repository": "m-abs/anime",
   "description": "JavaScript animation engine - forked for NativeScript",

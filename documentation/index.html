@@ -2663,21 +2663,7 @@ document.querySelector('.restart-demo .restart').onclick = animation.restart;
       <button class="reverse">Reverse</button>
     </div>
   </div>
-
-  <script>
-
-  var reverseAnimDemo = anime({
-    targets: '.reverse-anim-demo .el',
-    translateX: 270,
-    duration: 2000,
-    delay: function(el, i) { return i * 200; }
-  });
-
-  document.querySelector('.reverse-anim-demo .reverse').onclick = function() {
-    reverseAnimDemo.reverse();
-  }
-
-  var reverseAnim = function() {
+  <script>var reverseAnim = function() {
 /*DEMO*/
 var animation = anime({
   targets: '.reverse-anim-demo .el',

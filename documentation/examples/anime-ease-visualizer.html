@@ -17,7 +17,7 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <link href="../assets/css/animejs.css" rel="stylesheet">
   <link href="../assets/css/documentation.css" rel="stylesheet">
-  <script src="../../lib/anime.min.js"></script>
+  <!-- <script src="../../lib/anime.min.js"></script> -->
   <style>
     .easings {
       display: flex;
@@ -335,9 +335,16 @@
       <button value="easeInOutBack" >Back</button>
       <button value="easeInOutBounce" >Bounce</button>
       <button value="easeInOutElastic" >Elastic</button>
+      <label>Steps</label>
+      <button value="steps(2)" >steps(2)</button>
+      <button value="steps(5)" >steps(5)</button>
+      <button value="steps(10)" >steps(10)</button>
+      <button value="steps(20)" >steps(20)</button>
     </div>
   </div>
-  <script>
+  <script type="module">
+
+  import anime from '../../src/index.js';
 
   var pathEl = document.querySelector('.curve');
   var presetsEls = document.querySelectorAll('.options button');
@@ -406,8 +413,6 @@
   }
 
   presetsEls[0].click();
-
-  pathEl.setAttribute('d', getCoordinates(presetsEls[0].value));
 
   </script>
 </body>
